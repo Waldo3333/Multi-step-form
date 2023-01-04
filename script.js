@@ -366,7 +366,7 @@ function getPrice4() {
   document.getElementById("totalPrice").innerHTML = planPrice;
 }
 function getPrice5() {
-  planPrice = "120";
+  const planPrice = "120";
   console.log(planPrice);
   document.getElementById("totalPrice").innerHTML = planPrice;
 }
