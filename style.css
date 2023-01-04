@@ -424,8 +424,29 @@ button {
 }
 
 .dollar {
-  margin-left: -242px;
+  margin-left: -239px;
 }
 .underMedia {
   flex-direction: column;
+}
+#errorName {
+  color: red;
+  font-size: 12px;
+}
+#errorNum {
+  color: red;
+  font-size: 12px;
+}
+#errorMail {
+  color: red;
+  font-size: 12px;
+}
+.flexError {
+  display: flex;
+  text-align: center;
+  justify-content: space-between;
+}
+
+.flexError span {
+  padding-top: 19px;
 }
