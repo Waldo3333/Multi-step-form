@@ -17,22 +17,18 @@ button {
   border-radius: 10px;
   box-shadow: 20px 20px 20px rgba(47, 18, 18, 0.101);
   width: 1000px;
-  height: 600px;
+  height: 568px;
 }
 
 .displayStep {
   display: flex;
   justify-content: center;
-  width: 30%;
-  height: 600px;
+  width: 274px;
+  height: 568px;
   background-color: rgba(30, 16, 186, 0);
+  background-image: url(./image/bg-sidebar-desktop.svg);
 }
 
-.displayStep img {
-  position: absolute;
-  margin-left: 15px;
-  margin-top: 15px;
-}
 .circle {
   position: relative;
   background-color: rgba(220, 20, 60, 0);
@@ -190,8 +186,9 @@ button {
 
   background-color: rgba(0, 255, 51, 0);
 
-  padding-top: 19px;
+  padding-top: 39px;
 }
+
 .nextStep {
   padding: 15px 20px 15px 20px;
   width: 120px;
@@ -368,7 +365,7 @@ button {
   width: 80%;
   height: 15x0px;
   background-color: hsl(229deg 28% 96%);
-  padding: 1px 20px 10px 20px;
+  padding: 1px 30px 10px 20px;
   border-radius: 10px;
 }
 .containerResume button {
@@ -386,7 +383,7 @@ button {
 }
 .containerResume span {
   display: block;
-  margin-top: 20px;
+  margin-top: 0px;
   height: 1px;
   background-color: hsl(231deg 18% 88%);
 }
@@ -424,4 +421,11 @@ button {
   background-color: rgba(255, 255, 255, 0);
   font-size: 16px;
   color: hsl(231, 11%, 63%);
+}
+
+.dollar {
+  margin-left: -242px;
+}
+.underMedia {
+  flex-direction: column;
 }

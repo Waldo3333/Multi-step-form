@@ -26,11 +26,11 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="./style.css" />
+    <link rel="stylesheet" href="./style2.css" />
   </head>
   <body>
     <div class="container" id="container">
       <div class="displayStep" id="displayStep">
-        <img src="./image/bg-sidebar-desktop.svg" alt="sidebar" />
         <div class="circle">
           <div class="circle1" id="circle1"><p>1</p></div>
           <div class="circle2" id="circle2"><p>2</p></div>
@@ -60,8 +60,10 @@
         <!--PERSO INFOS -------------------------------------------------------------------->
         <div class="affichStep">
           <div class="stepInfo" id="stepInfo">
-            <h1>Personel Info</h1>
-            <p>Please provide vour name, email address, and phone number.</p>
+            <h1>Personal Info</h1>
+            <p class="descrition">
+              Please provide vour name, email address, and phone number.
+            </p>
             <p>Name</p>
             <input
               type="text"
@@ -90,43 +92,59 @@
           <!--SELECT PLAN ------------------------------------------------------------------------>
           <div class="stepPlan" id="stepPlan">
             <h1>Select your plan</h1>
-            <p>You have the option of monthly or yearly billing.</p>
+            <p class="descrition">
+              You have the option of monthly or yearly billing.
+            </p>
             <div class="planMonth" id="planMonth">
-              <button class="planButton" id="moisArcade">
+              <button class="planButton" id="moisArcade" onclick="getPrice1()">
                 <img src="./image/icon-arcade.svg" alt="" />
+
                 <p>Arcade</p>
                 <span id="priceMonth" class="priceMonth">9$/mo</span>
               </button>
 
-              <button class="planButton" id="moisAdvenced">
+              <button
+                class="planButton"
+                id="moisAdvenced"
+                onclick="getPrice2()"
+              >
                 <img src="./image/icon-advanced.svg" alt="" />
+
                 <p>Advenced</p>
                 <span id="priceMonth" class="priceMonth">12$/mo</span>
               </button>
 
-              <button class="planButton" id="moisPro">
+              <button class="planButton" id="moisPro" onclick="getPrice3()">
                 <img src="./image/icon-pro.svg" alt="" />
+
                 <p>Pro</p>
                 <span id="priceMonth" class="priceMonth">15$/mo</span>
               </button>
             </div>
             <div class="planMonth" id="planYear">
-              <button class="planButton" id="anneeArcade">
+              <button class="planButton" id="anneeArcade" onclick="getPrice4()">
                 <img src="./image/icon-arcade.svg" alt="" />
+
                 <p>Arcade</p>
                 <span class="priceYear">90$/yr</span>
                 <label class="free">2 months free</label>
               </button>
 
-              <button class="planButton" id="anneeAdvenced">
+              <button
+                class="planButton"
+                id="anneeAdvenced"
+                onclick="getPrice5()"
+              >
                 <img src="./image/icon-advanced.svg" alt="" />
+
                 <p>Advenced</p>
                 <span class="priceYear">120$/yr</span>
                 <label class="free">2 months free</label>
               </button>
 
-              <button class="planButton" id="anneePro">
+              <button class="planButton" id="anneePro" onclick="getPrice6()">
                 <img src="./image/icon-pro.svg" alt="" />
+
                 <p>Pro</p>
                 <span class="priceYear">150$/yr</span>
                 <label class="free">2 months free</label>
@@ -157,77 +175,109 @@
           <!--ADD ON---------------------------------------------------------------------------------->
           <div class="stepAddOn" id="stepAddOn">
             <h1>Pick add-ons</h1>
-            <p>Add-ons help enhance your gaming experience.</p>
+            <p class="descrition">
+              Add-ons help enhance your gaming experience.
+            </p>
             <!--bouton mois ------------------------------------------------------------------->
             <div id="addonMois">
               <div class="addOnButton">
                 <div class="regroup">
-                  <input type="checkbox" name="" id="onlineMois" />
+                  <input
+                    type="checkbox"
+                    id="onlineMois"
+                    name="adOnn"
+                    value="1"
+                  />
 
                   <div class="addOn">
-                    <p>Online service</p>
+                    <p class="AddSize">Online service</p>
                     <span>Access to multiplayer games</span>
                   </div>
                 </div>
-                <p>+$1/mo</p>
+                <p class="prix">+$1/mo</p>
               </div>
 
               <div class="addOnButton">
                 <div class="regroup">
-                  <input type="checkbox" name="" id="storageMois" />
+                  <input
+                    type="checkbox"
+                    name="adOnn"
+                    value="2"
+                    id="storageMois"
+                  />
                   <div class="addOn">
-                    <p>Larger storage</p>
+                    <p class="AddSize">Larger storage</p>
                     <span> 1TB of cloud save</span>
                   </div>
                 </div>
-                <p>+$2/mo</p>
+                <p class="prix">+$2/mo</p>
               </div>
 
               <div class="addOnButton">
                 <div class="regroup">
-                  <input type="checkbox" name="" id="customizableMois" />
+                  <input
+                    type="checkbox"
+                    name="adOnn"
+                    value="2"
+                    id="customizableMois"
+                  />
                   <div class="addOn">
-                    <p>Customizable profile</p>
+                    <p class="AddSize">Customizable profile</p>
                     <span>Custom theme on your profile</span>
                   </div>
                 </div>
-                <p>+$2/mo</p>
+                <p class="prix">+$2/mo</p>
               </div>
             </div>
             <!--bouton année -------------------------------------------------------------------->
             <div id="addonAnnee">
               <div class="addOnButton">
                 <div class="regroup">
-                  <input type="checkbox" name="" id="onlineAnnee" />
+                  <input
+                    type="checkbox"
+                    name="adOnn"
+                    value="10"
+                    id="onlineAnnee"
+                  />
 
                   <div class="addOn">
-                    <p>Online service</p>
+                    <p class="AddSize">Online service</p>
                     <span>Access to multiplayer games</span>
                   </div>
                 </div>
-                <p>+$10/yr</p>
+                <p class="prix">+$10/yr</p>
               </div>
 
               <div class="addOnButton">
                 <div class="regroup">
-                  <input type="checkbox" name="" id="storageAnnee" />
+                  <input
+                    type="checkbox"
+                    name="adOnn"
+                    value="20"
+                    id="storageAnnee"
+                  />
                   <div class="addOn">
-                    <p>Larger storage</p>
+                    <p class="AddSize">Larger storage</p>
                     <span> 1TB of cloud save</span>
                   </div>
                 </div>
-                <p>+$20/yr</p>
+                <p class="prix">+$20/yr</p>
               </div>
 
               <div class="addOnButton">
                 <div class="regroup">
-                  <input type="checkbox" name="" id="customizableAnnee" />
+                  <input
+                    type="checkbox"
+                    name="adOnn"
+                    value="20"
+                    id="customizableAnnee"
+                  />
                   <div class="addOn">
-                    <p>Customizable profile</p>
+                    <p class="AddSize">Customizable profile</p>
                     <span>Custom theme on your profile</span>
                   </div>
                 </div>
-                <p>+$20/yr</p>
+                <p class="prix">+$20/yr</p>
               </div>
             </div>
 
@@ -240,11 +290,15 @@
           <!--RESUME---------------------------------------------------------------------------------->
           <div class="stepSummary" id="stepSummary">
             <h1>Finishing up</h1>
-            <p>Double-check everything looks OK before confirming.</p>
+            <p class="descrition">
+              Double-check everything looks OK before confirming.
+            </p>
             <div class="resume">
               <div class="containerResume">
-                <div id="resumeMonth">
-                  <!--remuseMois----------------------------------------------------------->
+                <div
+                  id="resumeMonth"
+                  <!--remuseMois-------------------------------------------------------
+                >
                   <div class="flexResume">
                     <div>
                       <h4 id="modeResume">Select a plan</h4>
@@ -269,8 +323,9 @@
                 </div>
               </div>
               <div class="flexTotal">
-                <p id="modeTotal"></p>
+                <p id="modeTotal">Total</p>
                 <span id="totalPrice"></span>
+                <span class="dollar">$</span>
               </div>
               <div class="buttonContainerStepFour">
                 <button onclick="backStepThree()" class="goBack">
